@@ -1,70 +1,90 @@
-# Getting Started with Create React App
+# Testing Client
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This repository contains the frontend of the testing framework, built with React. It interacts with the backend API to display test results, manage settings, and provide a user-friendly interface for users to interact with the testing framework.
 
-## Available Scripts
+## Table of Contents
 
-In the project directory, you can run:
+- [Getting Started](#getting-started)
+- [Configuration](#configuration)
+- [API Endpoints](#api-endpoints)
+- [Technologies Used](#technologies-used)
 
-### `npm start`
+## Getting Started
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Prerequisites
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Ensure you have the following installed:
 
-### `npm test`
+- [Node.js](https://nodejs.org/) (version 14.x or higher)
+- npm (comes with Node.js)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Installation
 
-### `npm run build`
+1. Clone the repository:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+    ```bash
+    git clone https://github.com/your-username/testing-client.git
+    ```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+2. Navigate to the project directory:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+    ```bash
+    cd testing-client
+    ```
 
-### `npm run eject`
+3. Install dependencies:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+    ```bash
+    npm install
+    ```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+4. Create a `.env` file in the root directory and add your environment variables:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+    ```bash
+    REACT_APP_API_URL=http://localhost:5000
+    ```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Running the App
 
-## Learn More
+To start the app in development mode, run:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```bash
+npm start
+```
+The app will open in your default web browser at `http://localhost:3000`.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+This will launch the test runner in the interactive watch mode.
 
-### Code Splitting
+### Building the App
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+To build the app for production, run:
 
-### Analyzing the Bundle Size
+```bash
+npm run build
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+This will create a `build` directory with the production build of your app.
 
-### Making a Progressive Web App
+## Configuration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+The app is configured using environment variables. Ensure that the `.env` file is properly set up with the required API URL:
 
-### Advanced Configuration
+```plaintext
+REACT_APP_API_URL=http://localhost:5000
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## API Endpoints
 
-### Deployment
+This app interacts with the following backend API endpoints:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+- **GET /api/tests**: Fetches the list of test results.
+- **GET /api/settings**: Fetches the current settings.
+- **POST /api/settings**: Updates and saves settings.
 
-### `npm run build` fails to minify
+## Technologies Used
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- **React**: JavaScript library for building user interfaces.
+- **Axios**: Promise-based HTTP client for making API requests.
+- **MUI**: Material-UI, a popular React UI framework.
+
+### Created by Adi Booekr
